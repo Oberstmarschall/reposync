@@ -1,0 +1,20 @@
+git_root: '/home/vlad/volume'
+log_file_path: '/home/vlad/repos/repo-sync/app.log'
+threads: 3
+remotes:
+  aosp:
+    url: https://android.googlesource.com
+    local_prefix: aosp
+    repos:
+      - platform/manifest
+      - accessories/manifest
+      - brillo/manifest
+      - trusty/manifest
+      - tools/manifest
+  github:
+    url: https://github.com
+    local_prefix: github
+    refspec:
+      - +refs/heads/main:refs/heads/main
+    repos:
+      - go-git/go-git
